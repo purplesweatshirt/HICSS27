@@ -12,14 +12,14 @@ MODEL_NAME       = "Qwen/Qwen3.5-27B"
 N_TRIES          = 3
 N_RUNS           = 5
 N_REVISE         = 2
-INPUT_DIR        = "../ecis25_data/val/mineru/val_pdfs"
+INPUT_DIR        = "../../data/val/mineru/val_pdfs"
 OUTDIR           = "output_val_qwen"
 MAX_TOKENS       = 16384
 _THINK_RE        = re.compile(r'<think>.*?</think>', re.DOTALL)
-PATH2PROMPT      = 'relation_prompt.txt'
-PATH2SCHEMA      = 'relation_schema.txt'
-PATH2CONSTPROMPT = 'construct_prompt.txt'
-PATH2CONSTSCHEMA = 'construct_schema.txt'
+PATH2PROMPT      = '../../prompts/relation_prompt.txt'
+PATH2SCHEMA      = '../../prompts/relation_schema.txt'
+PATH2CONSTPROMPT = '../../prompts/construct_prompt.txt'
+PATH2CONSTSCHEMA = '../../prompts/construct_schema.txt'
 os.makedirs(OUTDIR, exist_ok=True)
 
 # Load LLM
